@@ -25,17 +25,19 @@ const CakeContainer = () => {
   // reduce array to single value
   const averageRating = cakes.reduce((total, cake) => total + cake.rating, 0) / cakes.length;
 
+// .toFixed(2) for 2 d.p.
   return (
     <>  
       <h2>Cakes:</h2>
       <p>Average Rating: {averageRating.toFixed(2)}</p> 
 
-
+        
       {cakes.map((cake, index) => (
         <Cake key={index} cake={cake} />
       ))}
     </>
   );
+
 }
 
 export default CakeContainer;
